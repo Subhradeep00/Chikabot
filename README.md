@@ -53,7 +53,7 @@ The Easiest Way to Deploy This Bot is Via Heroku.
 	
   <h1>
     <p align="center">
-        <a href="https://heroku.com/deploy?template=https://github.com/Subhradeep00/Akenobot">
+        <a href="https://heroku.com/deploy?template=https://github.com/Subhradeep00/Chikabot">
             <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
         </a>
     </p>
@@ -70,8 +70,8 @@ The Easiest Way to Deploy This Bot is Via Heroku.
 </p>
 
 ```console
-    ~$ git clone https://github.com/Subhradeep00/Akenobot 
-    ~$ cd Akenobot
+    ~$ git clone https://github.com/Subhradeep00/Chikabot
+    ~$ cd Chikabot
     ~$ cp sample_config.py config.py
 ```
 
