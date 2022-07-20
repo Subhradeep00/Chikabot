@@ -1,6 +1,6 @@
-from AsukaRobot.modules.helper_funcs.chat_status import user_admin
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot import dispatcher
+from Akenobot.modules.helper_funcs.chat_status import user_admin
+from Akenobot.modules.disable import DisableAbleCommandHandler
+from Akenobot import dispatcher
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram import ParseMode, Update
