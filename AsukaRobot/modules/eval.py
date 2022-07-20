@@ -5,7 +5,7 @@ import re
 import html
 import subprocess
 from io import StringIO, BytesIO
-from AsukaRobot import pgram, DEV_USERS
+from Akenobot import pgram, DEV_USERS
 from pyrogram import filters
 
 
@@ -115,15 +115,15 @@ async def terminal(client, message):
         output = None
     if output:
         if len(output) > 4096:
-            with open("AsukaRobot/output.txt", "w+") as file:
+            with open("Akenobot/output.txt", "w+") as file:
                 file.write(output)
             await client.send_document(
                 message.chat.id,
-                "AsukaRobot/output.txt",
+                "Akenobot/output.txt",
                 reply_to_message_id=message.message_id,
                 caption="`Output file`",
             )
-            os.remove("AsukaRobot/output.txt")
+            os.remove("Akenobot/output.txt")
             return
         await message.reply(f"**Output:**\n`{output}`", parse_mode="markdown")
     else:
