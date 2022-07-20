@@ -2,8 +2,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from AsukaRobot import pgram as app
-from AsukaRobot.utils.errors import capture_err
+from Akenobot import pgram as app
+from Akenobot.utils.errors import capture_err
 
 __mod_name__ = "WebSS"
 __help__ = "/webss | .webss [URL] - Take A Screenshot Of A Webpage"
