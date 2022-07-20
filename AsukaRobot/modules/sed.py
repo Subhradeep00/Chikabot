@@ -2,9 +2,9 @@ import sre_constants
 
 import regex
 import telegram
-from AsukaRobot import LOGGER, dispatcher
-from AsukaRobot.modules.disable import DisableAbleMessageHandler
-from AsukaRobot.modules.helper_funcs.regex_helper import (infinite_loop_check)
+from Akenobot import LOGGER, dispatcher
+from Akenobot.modules.disable import DisableAbleMessageHandler
+from Akenobot.modules.helper_funcs.regex_helper import (infinite_loop_check)
 from telegram import Update
 from telegram.ext import CallbackContext, Filters, run_async
 
