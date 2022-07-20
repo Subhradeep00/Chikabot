@@ -2,11 +2,11 @@ import html
 import random
 import time
 
-import AsukaRobot.modules.fun_strings as fun_strings
-from AsukaRobot import dispatcher
-from AsukaRobot.modules.disable import DisableAbleCommandHandler
-from AsukaRobot.modules.helper_funcs.chat_status import is_user_admin
-from AsukaRobot.modules.helper_funcs.extraction import extract_user
+import Akenobot.modules.fun_strings as fun_strings
+from Akenobot import dispatcher
+from Akenobot.modules.disable import DisableAbleCommandHandler
+from Akenobot.modules.helper_funcs.chat_status import is_user_admin
+from Akenobot.modules.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async
