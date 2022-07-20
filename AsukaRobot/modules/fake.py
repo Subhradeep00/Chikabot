@@ -7,8 +7,8 @@ from faker import Faker
 from faker.providers import internet
 from telethon import events
 
-from AsukaRobot.utils.pluginhelpers import is_admin
-from AsukaRobot import telethn, SUPPORT_CHAT
+from Akenobot.utils.pluginhelpers import is_admin
+from Akenobot import telethn, SUPPORT_CHAT
 
 
 @telethn.on(events.NewMessage(pattern="/fakegen$"))
