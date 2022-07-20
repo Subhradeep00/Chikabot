@@ -2,9 +2,9 @@ from datetime import datetime
 from functools import wraps
 
 from telegram.ext import CallbackContext
-from Akenobot.modules.helper_funcs.decorators import Akenocmd, Akenocallback
-from Akenobot.modules.helper_funcs.misc import is_module_loaded
-from Akenobot.modules.language import gs
+from AsukaRobot.modules.helper_funcs.decorators import Asukacmd, Asukacallback
+from AsukaRobot.modules.helper_funcs.misc import is_module_loaded
+from AsukaRobot.modules.language import gs
 
 from ..modules.helper_funcs.anonymous import user_admin, AdminPerms
 
@@ -20,9 +20,9 @@ if is_module_loaded(FILENAME):
     from telegram.error import BadRequest, Unauthorized
     from telegram.utils.helpers import escape_markdown
 
-    from Akenobot import EVENT_LOGS as GBAN_LOGS, LOGGER as log, dispatcher
-    from Akenobot.modules.helper_funcs.chat_status import user_admin as u_admin, is_user_admin
-    from Akenobot.modules.sql import log_channel_sql as sql
+    from AsukaRobot import EVENT_LOGS as GBAN_LOGS, LOGGER as log, dispatcher
+    from AsukaRobot.modules.helper_funcs.chat_status import user_admin as u_admin, is_user_admin
+    from AsukaRobot.modules.sql import log_channel_sql as sql
 
 
     def loggable(func):
@@ -106,7 +106,7 @@ if is_module_loaded(FILENAME):
                 )
 
 
-    @Akenoacmd(command='logchannel')
+    @Asukacmd(command='logchannel')
     @u_admin
     def logging(update: Update, context: CallbackContext):
         bot = context.bot
@@ -126,7 +126,7 @@ if is_module_loaded(FILENAME):
             message.reply_text("No log channel has been set for this group!")
 
 
-    @Akenocmd(command='setlog')
+    @Asukacmd(command='setlog')
     @user_admin(AdminPerms.CAN_CHANGE_INFO)
     def setlog(update: Update, context: CallbackContext):
         bot = context.bot
@@ -169,7 +169,7 @@ if is_module_loaded(FILENAME):
             )
 
 
-    @Akenocmd(command='unsetlog')
+    @Asukacmd(command='unsetlog')
     @user_admin(AdminPerms.CAN_CHANGE_INFO)
     def unsetlog(update: Update, context: CallbackContext):
         bot = context.bot
@@ -227,7 +227,7 @@ else:
         return func
 
 
-@Akenocmd("logsettings")
+@Asukacmd("logsettings")
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
 def log_settings(update: Update, _: CallbackContext):
     chat = update.effective_chat
@@ -253,10 +253,10 @@ def log_settings(update: Update, _: CallbackContext):
     msg.reply_text("Toggle channel log settings", reply_markup=btn)
 
 
-from Akenobot.modules.sql import log_channel_sql as sql
+from AsukaRobot.modules.sql import log_channel_sql as sql
 
 
-@Akenocallback(pattern=r"log_tog_.*")
+@Asukacallback(pattern=r"log_tog_.*")
 def log_setting_callback(update: Update, context: CallbackContext):
     cb = update.callback_query
     user = cb.from_user

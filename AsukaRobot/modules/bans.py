@@ -16,10 +16,10 @@ from telegram.utils.helpers import mention_html
 from typing import Optional, List
 from telegram import TelegramError
 
-import Akenobot.modules.sql.users_sql as sql
-from Akenobot.modules.disable import DisableAbleCommandHandler
-from Akenobot.modules.helper_funcs.filters import CustomFilters
-from Akenobot import (
+import AsukaRobot.modules.sql.users_sql as sql
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
+from AsukaRobot.modules.helper_funcs.filters import CustomFilters
+from AsukaRobot import (
     DEV_USERS,
     LOGGER,
     OWNER_ID,
@@ -29,7 +29,7 @@ from Akenobot import (
     WOLVES,
     dispatcher,
 )
-from Akenobot.modules.helper_funcs.chat_status import (
+from AsukaRobot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     bot_admin,
     can_restrict,
@@ -42,9 +42,9 @@ from Akenobot.modules.helper_funcs.chat_status import (
     can_delete,
     dev_plus,
 )
-from Akenobot.modules.helper_funcs.extraction import extract_user_and_text
-from Akenobot.modules.helper_funcs.string_handling import extract_time
-from Akenobot.modules.log_channel import gloggable, loggable
+from AsukaRobot.modules.helper_funcs.extraction import extract_user_and_text
+from AsukaRobot.modules.helper_funcs.string_handling import extract_time
+from AsukaRobot.modules.log_channel import gloggable, loggable
 
 
 

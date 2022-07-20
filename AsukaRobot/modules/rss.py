@@ -2,9 +2,9 @@ import html
 import re
 
 from feedparser import parse
-from Akenobot import dispatcher, updater
-from Akenobot.modules.helper_funcs.chat_status import user_admin
-from Akenobot.modules.sql import rss_sql as sql
+from AsukaRobot import dispatcher, updater
+from AsukaRobot.modules.helper_funcs.chat_status import user_admin
+from AsukaRobot.modules.sql import rss_sql as sql
 from telegram import ParseMode, Update, constants
 from telegram.ext import CallbackContext, CommandHandler
 

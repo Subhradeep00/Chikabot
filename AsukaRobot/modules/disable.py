@@ -2,10 +2,10 @@ import importlib
 from typing import Union
 
 from future.utils import string_types
-from Akenobot import dispatcher
-from Akenobot.modules.helper_funcs.handlers import (CMD_STARTERS,
+from AsukaRobot import dispatcher
+from AsukaRobot.modules.helper_funcs.handlers import (CMD_STARTERS,
                                                         SpamChecker)
-from Akenobot.modules.helper_funcs.misc import is_module_loaded
+from AsukaRobot.modules.helper_funcs.misc import is_module_loaded
 from telegram import ParseMode, Update
 from telegram.ext import (CallbackContext, CommandHandler, Filters,
                           MessageHandler, RegexHandler)
@@ -16,9 +16,9 @@ FILENAME = __name__.rsplit(".", 1)[-1]
 # If module is due to be loaded, then setup all the magical handlers
 if is_module_loaded(FILENAME):
 
-    from Akenobot.modules.helper_funcs.chat_status import (
+    from AsukaRobot.modules.helper_funcs.chat_status import (
         connection_status, is_user_admin, user_admin)
-    from Akenobot.modules.sql import disable_sql as sql
+    from AsukaRobot.modules.sql import disable_sql as sql
     from telegram.ext.dispatcher import run_async
 
     DISABLE_CMDS = []

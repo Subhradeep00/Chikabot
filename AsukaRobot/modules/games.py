@@ -6,11 +6,11 @@ from telegram import ParseMode, Update, ChatPermissions
 from telegram.ext import CallbackContext, run_async
 from telegram.error import BadRequest
 
-import Akenobot.modules.game_strings as game_strings
-from Akenobot import dispatcher
-from Akenobot.modules.disable import DisableAbleCommandHandler
-from Akenobot.modules.helper_funcs.chat_status import (is_user_admin)
-from Akenobot.modules.helper_funcs.extraction import extract_user
+import AsukaRobot.modules.game_strings as game_strings
+from AsukaRobot import dispatcher
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
+from AsukaRobot.modules.helper_funcs.chat_status import (is_user_admin)
+from AsukaRobot.modules.helper_funcs.extraction import extract_user
 
 
 @run_async

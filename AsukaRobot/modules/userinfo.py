@@ -24,7 +24,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
     
-from Akenobot import (
+from AsukaRobot import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -37,18 +37,18 @@ from Akenobot import (
     StartTime,
     SUPPORT_CHAT
 )
-from Akenobot.__main__ import STATS, TOKEN, USER_INFO
-from Akenobot.modules.sql import SESSION
-import Akenobot.modules.sql.userinfo_sql as sql
-from Akenobot.modules.disable import DisableAbleCommandHandler
-from Akenobot.modules.sql.global_bans_sql import is_user_gbanned
-from Akenobot.modules.redis.afk_redis import is_user_afk, afk_reason
-from Akenobot.modules.sql.users_sql import get_user_num_chats
-from Akenobot.modules.helper_funcs.chat_status import sudo_plus
-from Akenobot.modules.helper_funcs.extraction import extract_user
-from Akenobot import telethn
+from AsukaRobot.__main__ import STATS, TOKEN, USER_INFO
+from AsukaRobot.modules.sql import SESSION
+import AsukaRobot.modules.sql.userinfo_sql as sql
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
+from AsukaRobot.modules.sql.global_bans_sql import is_user_gbanned
+from AsukaRobot.modules.redis.afk_redis import is_user_afk, afk_reason
+from AsukaRobot.modules.sql.users_sql import get_user_num_chats
+from AsukaRobot.modules.helper_funcs.chat_status import sudo_plus
+from AsukaRobot.modules.helper_funcs.extraction import extract_user
+from AsukaRobot import telethn
 
-Akeno_IMG = "https://te.legra.ph/file/ce84881970d9514a62fd4.jpg"
+Asuka_IMG = "https://te.legra.ph/file/ce84881970d9514a62fd4.jpg"
 
 def no_by_per(totalhp, percentage):
     """
@@ -460,7 +460,7 @@ def stats(update, context):
     status += "*➢ Uptime:* " + str(botuptime) + "\n"
     try:
         update.effective_message.reply_photo(
-            Akeno_IMG,
+            Asuka_IMG,
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])

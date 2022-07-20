@@ -5,10 +5,10 @@ from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Upda
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import CommandHandler, CallbackQueryHandler, run_async
 
-import Akenobot.modules.sql.connection_sql as sql
-from Akenobot import dispatcher, DRAGONS, DEV_USERS
-from Akenobot.modules.helper_funcs import chat_status
-from Akenobot.modules.helper_funcs.alternate import send_message, typing_action
+import AsukaRobot.modules.sql.connection_sql as sql
+from AsukaRobot import dispatcher, DRAGONS, DEV_USERS
+from AsukaRobot.modules.helper_funcs import chat_status
+from AsukaRobot.modules.helper_funcs.alternate import send_message, typing_action
 
 user_admin = chat_status.user_admin
 

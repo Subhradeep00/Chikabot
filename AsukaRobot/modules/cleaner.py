@@ -1,14 +1,14 @@
 import html
 
-from Akenobot import ALLOW_EXCL, CustomCommandHandler, dispatcher
-from Akenobot.modules.disable import DisableAbleCommandHandler
-from Akenobot.modules.helper_funcs.chat_status import (
+from AsukaRobot import ALLOW_EXCL, CustomCommandHandler, dispatcher
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
+from AsukaRobot.modules.helper_funcs.chat_status import (
     bot_can_delete,
     connection_status,
     dev_plus,
     user_admin,
 )
-from Akenobot.modules.sql import cleaner_sql as sql
+from AsukaRobot.modules.sql import cleaner_sql as sql
 from telegram import ParseMode, Update
 from telegram.ext import (
     CallbackContext,

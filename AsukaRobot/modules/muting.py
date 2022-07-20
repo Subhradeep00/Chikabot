@@ -4,17 +4,17 @@ import html
 import re
 from typing import Optional
 
-from Akenobot import LOGGER, TIGERS, dispatcher
-from Akenobot.modules.helper_funcs.chat_status import (bot_admin,
+from AsukaRobot import LOGGER, TIGERS, dispatcher
+from AsukaRobot.modules.helper_funcs.chat_status import (bot_admin,
                                                           user_admin_no_reply,
                                                            can_restrict,
                                                            connection_status,
                                                            is_user_admin,
                                                            user_admin)
-from Akenobot.modules.helper_funcs.extraction import (extract_user,
+from AsukaRobot.modules.helper_funcs.extraction import (extract_user,
                                                           extract_user_and_text)
-from Akenobot.modules.helper_funcs.string_handling import extract_time
-from Akenobot.modules.log_channel import loggable
+from AsukaRobot.modules.helper_funcs.string_handling import extract_time
+from AsukaRobot.modules.log_channel import loggable
 
 from telegram import (
     Bot, 

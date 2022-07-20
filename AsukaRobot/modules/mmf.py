@@ -4,9 +4,9 @@ import textwrap
 
 import os
 
-from Akenobot.events import register
+from AsukaRobot.events import register
 
-from Akenobot import (
+from AsukaRobot import (
 
     LOGGER,
 
@@ -16,7 +16,7 @@ from Akenobot import (
 
 
 
-from Akenobot import telethn as bot
+from AsukaRobot import telethn as bot
 
 
 Credit = "Akatsuki" 
@@ -48,7 +48,7 @@ async def handler(event):
 
     msg = await event.reply("```Memifying this image! ```")
 
-    if "Subhradeep00" in Credit:
+    if "Xelcius" in Credit:
        pass
 
     else: 
@@ -86,7 +86,7 @@ async def drawText(image_path, text):
 
     else:
 
-        fnt = "./Akenobot/resources/default.ttf"
+        fnt = "./AsukaRobot/resources/default.ttf"
 
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
 

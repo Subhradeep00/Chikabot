@@ -8,21 +8,21 @@ import importlib
 from functools import partial
 from pyrogram import Client , filters
 from pyrogram.types import Message
-import Akenobot.modules.sql.welcome_sql as sql
-from Akenobot import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS,
+import AsukaRobot.modules.sql.welcome_sql as sql
+from AsukaRobot import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS,
                           WOLVES, sw, dispatcher, EVENT_LOGS, JOIN_LOGGER, pgram)
-from Akenobot.modules.helper_funcs.chat_status import (
+from AsukaRobot.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from Akenobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from Akenobot.modules.helper_funcs.msg_types import get_welcome_type
-from Akenobot.modules.helper_funcs.string_handling import (
+from AsukaRobot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from AsukaRobot.modules.helper_funcs.msg_types import get_welcome_type
+from AsukaRobot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from Akenobot.modules.log_channel import loggable
-from Akenobot.modules.sql.global_bans_sql import is_user_gbanned
+from AsukaRobot.modules.log_channel import loggable
+from AsukaRobot.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -40,8 +40,8 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
-from Akenobot.modules.helper_funcs.misc import paginate_modules
-from Akenobot.modules import ALL_MODULES
+from AsukaRobot.modules.helper_funcs.misc import paginate_modules
+from AsukaRobot.modules import ALL_MODULES
 
 VALID_WELCOME_FORMATTERS = [
     "first",
@@ -67,9 +67,9 @@ ENUM_FUNC_MAP = {
 
 VERIFIED_USER_WAITLIST = {}
 
-Akeno_IMG = "https://te.legra.ph/file/ef23710973ce9f7324dbb.jpg"
-Akeno = "https://te.legra.ph/file/31182ba42619e830137e7.jpg"
-Akeno_VID = "https://te.legra.ph/file/ea6377b741d49aaed08df.jpg"
+Asuka_IMG = "https://te.legra.ph/file/ef23710973ce9f7324dbb.jpg"
+Asuka = "https://te.legra.ph/file/31182ba42619e830137e7.jpg"
+Asuka_VID = "https://te.legra.ph/file/ea6377b741d49aaed08df.jpg"
 WAIFUS_IMG = "https://te.legra.ph/file/450e628faa4e23f9b0670.jpg"
 
 
@@ -196,7 +196,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_video(
-                Akeno_IMG, caption= "Behold!!! My Master Just Arrived.",
+                Asuka_IMG, caption= "Behold!!! My Master Just Arrived.",
                     reply_to_message_id=reply)
                 welcome_log = (f"{html.escape(chat.title)}\n"
                                f"#USER_JOINED\n"
@@ -214,7 +214,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
                 update.effective_message.reply_photo(
-                Akeno, caption= "Huh! A Knight Joined Your Chat",
+                Asuka, caption= "Huh! A Knight Joined Your Chat",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -222,7 +222,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Support
             elif new_mem.id in DEMONS:
                 update.effective_message.reply_photo(
-                Akeno, caption= "Huh! A Demon just Arrived!",
+                Asuka, caption= "Huh! A Demon just Arrived!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -230,14 +230,14 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Whitelisted
             elif new_mem.id in TIGERS:
                 update.effective_message.reply_photo(
-                Akeno, caption= "Oof! A God just joined!",
+                Asuka, caption= "Oof! A God just joined!",
                     reply_to_message_id=reply)
                 continue
 
             # Welcome Tigers
             elif new_mem.id in WOLVES:
                 update.effective_message.reply_photo(
-                Akeno, caption= "Oof! A Demi-God just Showed Up!",
+                Asuka, caption= "Oof! A Demi-God just Showed Up!",
                     reply_to_message_id=reply)
                 continue
             # Welcome yourself
@@ -512,7 +512,7 @@ def left_member(update: Update, context: CallbackContext):
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
                 update.effective_message.reply_photo(
-                Akeno_VID, caption= "Alas! My Master Left...", reply_to_message_id=reply)
+                Asuka_VID, caption= "Alas! My Master Left...", reply_to_message_id=reply)
                 return
 
             # Give the devs a special goodbye
@@ -1047,7 +1047,7 @@ For all command use / or !
 """
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("Akenobot.modules." +
+    imported_module = importlib.import_module("AsukaRobot.modules." +
                                               module_name)
     if hasattr(imported_module, "__help__") and imported_module.__help__:
         HELPABLE[imported_module.__mod_name__.lower()] = imported_module

@@ -12,11 +12,11 @@ import time
 from io import BytesIO
 from requests import get
 from telethon.tl.types import InputMessagesFilterPhotos
-from Akenobot import telethn as tbot
+from AsukaRobot import telethn as tbot
 
-from Akenobot import OWNER_ID, BOT_USERNAME, SUPPORT_CHAT
-from Akenobot.events import register
-from Akenobot import telethn
+from AsukaRobot import OWNER_ID, BOT_USERNAME, SUPPORT_CHAT
+from AsukaRobot.events import register
+from AsukaRobot import telethn
 from PIL import Image, ImageDraw, ImageFont
 
 
@@ -316,7 +316,7 @@ async def lego(event):
     pointsize = 500
     fillcolor = "black"
     shadowcolor = "blue"
-    fnt = glob.glob("./Akenobot/resources/Vampire Wars.otf")
+    fnt = glob.glob("./AsukaRobot/resources/Vampire Wars.otf")
     randf = random.choice(fnt)
     font = ImageFont.truetype(randf, 120)
     w, h = draw.textsize(text, font=font)
@@ -326,7 +326,7 @@ async def lego(event):
     x = (image_widthz-w)/2
     y = ((image_heightz-h)/2+6)
     draw.text((x, y), text, font=font, fill="white", stroke_width=1, stroke_fill="black")
-    fname = "Akeno.png"
+    fname = "Asuka.png"
     img.save(fname, "png")
     await telethn.send_file(event.chat_id, file=fname, caption = f"Made by @{BOT_USERNAME}")         
     await pesan.delete()

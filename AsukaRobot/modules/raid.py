@@ -11,10 +11,10 @@ from telegram.utils.helpers import mention_html
 from .log_channel import loggable
 from .helper_funcs.anonymous import user_admin, AdminPerms
 from .helper_funcs.chat_status import bot_admin, connection_status, user_admin_no_reply
-from .helper_funcs.decorators import Akenocmd, Akenocallback
+from .helper_funcs.decorators import Asukacmd, Asukacallback
 from .. import LOGGER, updater
 
-import Akenobot.modules.sql.welcome_sql as sql
+import AsukaRobot.modules.sql.welcome_sql as sql
 
 j = updater.job_queue
 
@@ -36,7 +36,7 @@ def get_readable_time(time: int) -> str:
     return "{} hour(s)".format(t[0]) if time >= 3600 else "{} minutes".format(t[1])
 
 
-@Akenocmd(command="raid", pass_args=True)
+@Asukacmd(command="raid", pass_args=True)
 @bot_admin
 @connection_status
 @loggable
@@ -100,7 +100,7 @@ def setRaid(update: Update, context: CallbackContext) -> Optional[str]:
             msg.reply_text("Unknown time given, give me something like 5m or 1h", parse_mode=ParseMode.HTML)
 
 
-@Akenocallback(pattern="enable_raid=")
+@Asukacallback(pattern="enable_raid=")
 @connection_status
 @user_admin_no_reply
 @loggable
@@ -137,7 +137,7 @@ def enable_raid_cb(update: Update, ctx: CallbackContext) -> Optional[str]:
     )
 
 
-@Akenocallback(pattern="disable_raid=")
+@Asukacallback(pattern="disable_raid=")
 @connection_status
 @user_admin_no_reply
 @loggable
@@ -163,7 +163,7 @@ def disable_raid_cb(update: Update, _: CallbackContext) -> Optional[str]:
     return logmsg
 
 
-@Akenocallback(pattern="cancel_raid=")
+@Asukacallback(pattern="cancel_raid=")
 @connection_status
 @user_admin_no_reply
 def disable_raid_cb(update: Update, _: CallbackContext):
@@ -174,7 +174,7 @@ def disable_raid_cb(update: Update, _: CallbackContext):
         parse_mode=ParseMode.HTML)
 
 
-@Akenocmd(command="raidtime")
+@Asukacmd(command="raidtime")
 @connection_status
 @loggable
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
@@ -208,7 +208,7 @@ def raidtime(update: Update, context: CallbackContext) -> Optional[str]:
         msg.reply_text("Unknown time given, give me something like 5m or 1h", parse_mode=ParseMode.HTML)
 
 
-@Akenocmd(command="raidactiontime", pass_args=True)
+@Asukacmd(command="raidactiontime", pass_args=True)
 @connection_status
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
 @loggable

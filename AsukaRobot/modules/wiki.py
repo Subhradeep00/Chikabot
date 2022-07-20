@@ -1,6 +1,6 @@
 import wikipedia
-from Akenobot import dispatcher
-from Akenobot.modules.disable import DisableAbleCommandHandler
+from AsukaRobot import dispatcher
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
 from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 from wikipedia.exceptions import DisambiguationError, PageError

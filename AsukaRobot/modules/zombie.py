@@ -6,7 +6,7 @@ from telethon.errors import ChatAdminRequiredError, UserAdminInvalidError
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights, ChannelParticipantsAdmins
 
-from Akenobot import telethn, OWNER_ID, DEV_USERS, DRAGONS, DEMONS
+from AsukaRobot import telethn, OWNER_ID, DEV_USERS, DRAGONS, DEMONS
 
 # =================== CONSTANT ===================
 
@@ -97,7 +97,7 @@ async def rm_deletedacc(show):
     await memek.edit(del_status)
         
 from telethon.tl.types import UserStatusLastMonth, UserStatusLastWeek, ChatBannedRights
-from Akenobot.events import register
+from AsukaRobot.events import register
 from telethon import *
 from telethon.tl.functions.channels import (EditBannedRequest)
                                             

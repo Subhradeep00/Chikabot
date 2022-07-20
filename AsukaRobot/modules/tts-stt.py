@@ -7,9 +7,9 @@ import json
 from telegram import ChatAction
 from telegram.ext import run_async
 
-from Akenobot import dispatcher
-from Akenobot.modules.disable import DisableAbleCommandHandler
-from Akenobot.modules.helper_funcs.alternate import typing_action, send_action
+from AsukaRobot import dispatcher
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
+from AsukaRobot.modules.helper_funcs.alternate import typing_action, send_action
 
 @send_action(ChatAction.RECORD_AUDIO)
 def gtts(update, context):

@@ -1,18 +1,18 @@
 import html
 from typing import Optional
 
-import Akenobot.modules.sql.blsticker_sql as sql
-from Akenobot import LOGGER, dispatcher
-from Akenobot.modules.connection import connected
-from Akenobot.modules.disable import DisableAbleCommandHandler
-from Akenobot.modules.helper_funcs.alternate import send_message
-from Akenobot.modules.helper_funcs.chat_status import (user_admin,
+import AsukaRobot.modules.sql.blsticker_sql as sql
+from AsukaRobot import LOGGER, dispatcher
+from AsukaRobot.modules.connection import connected
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
+from AsukaRobot.modules.helper_funcs.alternate import send_message
+from AsukaRobot.modules.helper_funcs.chat_status import (user_admin,
                                                            user_not_admin)
-from Akenobot.modules.helper_funcs.misc import split_message
-from Akenobot.modules.helper_funcs.string_handling import extract_time
+from AsukaRobot.modules.helper_funcs.misc import split_message
+from AsukaRobot.modules.helper_funcs.string_handling import extract_time
 
-from Akenobot.modules.log_channel import loggable
-from Akenobot.modules.warns import warn
+from AsukaRobot.modules.log_channel import loggable
+from AsukaRobot.modules.warns import warn
 from telegram import (Chat, Message, ParseMode, Update, User, ChatPermissions)
 from telegram.error import BadRequest
 from telegram.ext import (CallbackContext, CommandHandler, Filters,

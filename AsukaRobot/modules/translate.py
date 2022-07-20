@@ -3,8 +3,8 @@ from emoji import UNICODE_EMOJI
 from telegram import  Update, ParseMode 
 from telegram.ext import run_async ,CallbackContext
 from gpytranslate import SyncTranslator
-from Akenobot import dispatcher
-from Akenobot.modules.disable import DisableAbleCommandHandler
+from AsukaRobot import dispatcher
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
 trans = SyncTranslator()
  
 def totranslate(update: Update, context: CallbackContext) -> None:
@@ -15,7 +15,7 @@ def totranslate(update: Update, context: CallbackContext) -> None:
             "Reply to messages or write messages from other languages ​​for translating into the intended language\n\n"
             "Example: `/tr en-ja` to translate from English to Japanese\n"
             "Or use: `/tr ja` for automatic detection and translating it into japanese.\n"
-            "See [List of Language Codes](t.me/AkenoSupport0) for a list of language codes.",
+            "See [List of Language Codes](t.me/AsukaSuppport) for a list of language codes.",
             parse_mode="markdown",
             disable_web_page_preview=True)
         return

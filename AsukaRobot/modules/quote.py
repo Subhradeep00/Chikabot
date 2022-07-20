@@ -3,8 +3,8 @@ from traceback import format_exc
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Akenobot import pgram, arq
-from Akenobot.utils.errors import capture_err
+from AsukaRobot import pgram, arq
+from AsukaRobot.utils.errors import capture_err
 
 
 async def quotify(messages: list):

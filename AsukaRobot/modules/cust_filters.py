@@ -13,17 +13,17 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from Akenobot import DRAGONS, LOGGER, dispatcher
-from Akenobot.modules.connection import connected
-from Akenobot.modules.disable import DisableAbleCommandHandler
-from Akenobot.modules.helper_funcs.alternate import send_message, typing_action
-from Akenobot.modules.helper_funcs.chat_status import user_admin
-from Akenobot.modules.helper_funcs.extraction import extract_text
-from Akenobot.modules.helper_funcs.filters import CustomFilters
-from Akenobot.modules.helper_funcs.handlers import MessageHandlerChecker
-from Akenobot.modules.helper_funcs.misc import build_keyboard_parser
-from Akenobot.modules.helper_funcs.msg_types import get_filter_type
-from Akenobot.modules.helper_funcs.string_handling import (
+from AsukaRobot import DRAGONS, LOGGER, dispatcher
+from AsukaRobot.modules.connection import connected
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
+from AsukaRobot.modules.helper_funcs.alternate import send_message, typing_action
+from AsukaRobot.modules.helper_funcs.chat_status import user_admin
+from AsukaRobot.modules.helper_funcs.extraction import extract_text
+from AsukaRobot.modules.helper_funcs.filters import CustomFilters
+from AsukaRobot.modules.helper_funcs.handlers import MessageHandlerChecker
+from AsukaRobot.modules.helper_funcs.misc import build_keyboard_parser
+from AsukaRobot.modules.helper_funcs.msg_types import get_filter_type
+from AsukaRobot.modules.helper_funcs.string_handling import (
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,

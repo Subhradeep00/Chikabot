@@ -19,8 +19,8 @@ from telegram.error import BadRequest
 from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
                           Filters, MessageHandler)
 from telegram.utils.helpers import mention_html
-import Akenobot.modules.sql.users_sql as sql
-from Akenobot import (
+import AsukaRobot.modules.sql.users_sql as sql
+from AsukaRobot import (
     OWNER_ID,
     DRAGONS,
     DEMONS,
@@ -30,9 +30,9 @@ from Akenobot import (
     pgram,
     sw, LOGGER
 )
-from Akenobot.modules.helper_funcs.misc import article
-from Akenobot.modules.helper_funcs.decorators import Akenoinline
-from Akenobot.modules.sudoers import bot_sys_stats as bss
+from AsukaRobot.modules.helper_funcs.misc import article
+from AsukaRobot.modules.helper_funcs.decorators import Asukainline
+from AsukaRobot.modules.sudoers import bot_sys_stats as bss
 
 
 def remove_prefix(text, prefix):
@@ -40,7 +40,7 @@ def remove_prefix(text, prefix):
         text = text.replace(prefix, "", 1)
     return text
 
-@Akenoinline()
+@Asukainline()
 def inlinequery(update: Update, _) -> None:
     """
     Main InlineQueryHandler callback.
@@ -286,7 +286,7 @@ def hentai(query: str, update: Update, context: CallbackContext) -> None:
     )
     update.inline_query.answer(results)
     
-def akeno(query: str, update: Update, context: CallbackContext) -> None:
+def asuka(query: str, update: Update, context: CallbackContext) -> None:
     """Handle the inline query."""
     query = update.inline_query.query
     user_id = update.effective_user.id
@@ -300,19 +300,19 @@ def akeno(query: str, update: Update, context: CallbackContext) -> None:
         [
             [
                 InlineKeyboardButton(
-                    text="Akeno Robot",
-                    url=f"https://t.me/Akenobot",
+                    text="Asuka Robot",
+                    url=f"https://t.me/AsukaRobot",
                 ),
 
             ],
             [
                 InlineKeyboardButton(
                     text="Support",
-                    url=f"https://t.me/AkenoSupport0",
+                    url=f"https://t.me/AsukaSupport",
                 ),
                  InlineKeyboardButton(
                     text="Updates",
-                    url=f"https://t.me/AkenoUpdates00",
+                    url=f"https://t.me/AsukaUpdates",
                 ),
 
             ],
@@ -328,8 +328,8 @@ def akeno(query: str, update: Update, context: CallbackContext) -> None:
     results.append(
         InlineQueryResultPhoto(
             id=str(uuid4()),
-            title="Akeno",
-            description="Get Akeno Inline",
+            title="Asuka",
+            description="Get Asuka Inline",
             thumb_url="https://telegra.ph/file/62ad4ddfcb9ec5189a590.jpg",
             photo_url="https://telegra.ph/file/f6be5a2866ae719a17fb0.jpg",
             caption=about_text,
@@ -458,7 +458,7 @@ def media_query(query: str, update: Update, context: CallbackContext) -> None:
                 [
                     InlineKeyboardButton(
                         text="Report error",
-                        url="https://t.me/AkenoSupport0",
+                        url="https://t.me/AsukaSupport",
                     ),
                     InlineKeyboardButton(
                         text="Search again",
@@ -490,7 +490,7 @@ def help(query: str, update: Update, context: CallbackContext) -> None:
     user = context.bot.get_chat(user_id)
     sql.update_user(user.id, user.username)
     help_text = f"""
-     [Akeno Inline Help](https://t.me/Akenobot)\n*Inline Help Commands:*\n*• .hentai:* `You Can Get Hentai Links`\n*• .kaizuryu* `To Check Out @Anime_Flix_India `\n*• .anilist:* `To Search Animes And Mangas`\n*• .info:* `To Check Your Information`\n• Want your own inline on @AsukaRobot? You can get it in low pricing by contacting @Multimeterv3
+     [Asuka Inline Help](https://t.me/AsukaRobot)\n*Inline Help Commands:*\n*• .hentai:* `You Can Get Hentai Links`\n*• .kaizuryu* `To Check Out Kaizuryu Network`\n*• .anilist:* `To Search Animes And Mangas`\n*• .info:* `To Check Your Information`\n• Want your own inline on @AsukaRobot? You can get it in low pricing by contacting @Xelcius
      """
     results: list = []
     kb = InlineKeyboardMarkup(

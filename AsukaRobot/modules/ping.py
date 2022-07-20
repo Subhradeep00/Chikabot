@@ -5,7 +5,7 @@ import re
 import os
 import asyncio
 from typing import List
-from Akenobot.modules.sudoers import bot_sys_stats
+from AsukaRobot.modules.sudoers import bot_sys_stats
 
 import requests
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
@@ -18,15 +18,15 @@ from telegram.ext import (
     MessageHandler,
 )
 
-from Akenobot import StartTime, dispatcher, pgram
+from AsukaRobot import StartTime, dispatcher, pgram
 from pyrogram import filters
-from Akenobot.modules.disable import DisableAbleCommandHandler
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
 
 sites_list = {
-    "Telegram": "https://api.telegram.org"
-    "Anime": "https://animixplay.to"
-    "MAL": "https://myanimelist.net"
-    "Wallpaper": "https//wallpapercave.com"
+    "Telegram": "https://api.telegram.org",
+    "Kaizoku": "https://animekaizoku.com",
+    "Kayo": "https://animekayo.com",
+    "Jikan": "https://api.jikan.moe/v3"
 }
 
 PING_IMG = "https://te.legra.ph/file/ce84881970d9514a62fd4.jpg"
@@ -72,7 +72,7 @@ def ping_func(to_ping: List[str]) -> List[str]:
 
         pinged_site = f"<b>{each_ping}</b>"
 
-        if each_ping == "Subhradeep00" or each_ping == "Multimeterv3":
+        if each_ping == "Kaizoku" or each_ping == "Kayo":
             pinged_site = f'<a href="{sites_list[each_ping]}">{each_ping}</a>'
             ping_time = f"<code>{ping_time} (Status: {r.status_code})</code>"
 

@@ -1,8 +1,8 @@
 from typing import Optional
 
-import Akenobot.modules.sql.rules_sql as sql
-from Akenobot import dispatcher
-from Akenobot.modules.helper_funcs.string_handling import markdown_parser
+import AsukaRobot.modules.sql.rules_sql as sql
+from AsukaRobot import dispatcher
+from AsukaRobot.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -14,12 +14,12 @@ from telegram import (
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters
 from telegram.utils.helpers import escape_markdown
-from Akenobot.modules.helper_funcs.decorators import Akenocmd
+from AsukaRobot.modules.helper_funcs.decorators import Asukacmd
 
 from ..modules.helper_funcs.anonymous import user_admin, AdminPerms
 
 
-@Akenocmd(command='rules', filters=Filters.chat_type.groups)
+@Asukacmd(command='rules', filters=Filters.chat_type.groups)
 def get_rules(update: Update, _: CallbackContext):
     chat_id = update.effective_chat.id
     send_rules(update, chat_id)
@@ -78,7 +78,7 @@ def send_rules(update, chat_id, from_pm=False):
         )
 
 
-@Akenocmd(command='setrules', filters=Filters.chat_type.groups)
+@Asukacmd(command='setrules', filters=Filters.chat_type.groups)
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
 def set_rules(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
@@ -96,7 +96,7 @@ def set_rules(update: Update, context: CallbackContext):
         update.effective_message.reply_text("Successfully set rules for this group.")
 
 
-@Akenocmd(command='clearrules', filters=Filters.chat_type.groups)
+@Asukacmd(command='clearrules', filters=Filters.chat_type.groups)
 @user_admin(AdminPerms.CAN_CHANGE_INFO)
 def clear_rules(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
@@ -122,7 +122,7 @@ def __chat_settings__(chat_id, user_id):
     return f"This chat has had it's rules set: `{bool(sql.get_rules(chat_id))}`"
 
 
-from Akenobot.modules.language import gs
+from AsukaRobot.modules.language import gs
 
 
 def get_help(chat):

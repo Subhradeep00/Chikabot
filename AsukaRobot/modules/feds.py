@@ -21,7 +21,7 @@ from telegram import (
 )
 from telegram.utils.helpers import mention_html, mention_markdown
 
-from Akenobot import (
+from AsukaRobot import (
     dispatcher,
     OWNER_ID,
     DRAGONS,
@@ -29,22 +29,22 @@ from Akenobot import (
     EVENT_LOGS,
     LOGGER,
 )
-from Akenobot.modules.helper_funcs.chat_status import is_user_admin
-from Akenobot.modules.helper_funcs.extraction import (
+from AsukaRobot.modules.helper_funcs.chat_status import is_user_admin
+from AsukaRobot.modules.helper_funcs.extraction import (
     extract_user,
     extract_unt_fedban,
     extract_user_fban,
 )
-from Akenobot.modules.helper_funcs.string_handling import markdown_parser
+from AsukaRobot.modules.helper_funcs.string_handling import markdown_parser
 
-import Akenobot.modules.sql.feds_sql as sql
+import AsukaRobot.modules.sql.feds_sql as sql
 
-from Akenobot.modules.helper_funcs.alternate import (
+from AsukaRobot.modules.helper_funcs.alternate import (
     send_message,
     typing_action,
     send_action,
 )
-from Akenobot.modules.helper_funcs.decorators import Akenocmd, Akenocallback
+from AsukaRobot.modules.helper_funcs.decorators import Asukacmd, Asukacallback
 
 # Hello bot owner, I spent many hours of my life for feds, Please don't remove this if you still respect MrYacha and peaktogoo and AyraHikari too
 # Federation by MrYacha 2018-2019
@@ -90,7 +90,7 @@ UNFBAN_ERRORS = {
 
 
 @typing_action
-@Akenocmd(command='newfed')
+@Asukacmd(command='newfed')
 def new_fed(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -143,7 +143,7 @@ def new_fed(update, context):
 
 
 @typing_action
-@Akenocmd(command='delfed', pass_args=True)
+@Asukacmd(command='delfed', pass_args=True)
 def del_fed(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -191,7 +191,7 @@ def del_fed(update, context):
 
 
 @typing_action
-@Akenocmd(command='chatfed', pass_args=True)
+@Asukacmd(command='chatfed', pass_args=True)
 def fed_chat(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     fed_id = sql.get_fed_id(chat.id)
@@ -217,7 +217,7 @@ def fed_chat(update, context):
 
 
 @typing_action
-@Akenocmd(command='joinfed', pass_args=True)
+@Asukacmd(command='joinfed', pass_args=True)
 def join_fed(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -279,7 +279,7 @@ def join_fed(update, context):
 
 
 @typing_action
-@Akenocmd(command='leavefed')
+@Asukacmd(command='leavefed')
 def leave_fed(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -321,7 +321,7 @@ def leave_fed(update, context):
 
 
 @typing_action
-@Akenocmd(command='fpromote', pass_args=True)
+@Asukacmd(command='fpromote', pass_args=True)
 def user_join_fed(update, context):
     chat = update.effective_chat
     user = update.effective_user
@@ -386,7 +386,7 @@ def user_join_fed(update, context):
 
 
 @typing_action
-@Akenocmd(command='fdemote', pass_args=True)
+@Asukacmd(command='fdemote', pass_args=True)
 def user_demote_fed(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -447,7 +447,7 @@ def user_demote_fed(update, context):
 
 
 @typing_action
-@Akenocmd(command='fedinfo', pass_args=True)
+@Asukacmd(command='fedinfo', pass_args=True)
 def fed_info(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -496,7 +496,7 @@ def fed_info(update, context):
 
 
 @typing_action
-@Akenocmd(command='fedadmins', pass_args=True)
+@Asukacmd(command='fedadmins', pass_args=True)
 def fed_admin(update, context):
 
     chat = update.effective_chat  # type: Optional[Chat]
@@ -547,7 +547,7 @@ def fed_admin(update, context):
 
 
 @typing_action
-@Akenocmd(command=['fban', 'fedban'], pass_args=True)
+@Asukacmd(command=['fban', 'fedban'], pass_args=True)
 def fed_ban(update, context):  # sourcery no-metrics
 
     chat = update.effective_chat  # type: Optional[Chat]
@@ -966,7 +966,7 @@ def fed_ban(update, context):  # sourcery no-metrics
 
 
 @typing_action
-@Akenocmd(command=['unfban', 'rmfedban'], pass_args=True)
+@Asukacmd(command=['unfban', 'rmfedban'], pass_args=True)
 def unfban(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -1250,7 +1250,7 @@ def set_frules(update, context):
 
 
 @typing_action
-@Akenocmd(command='frules', pass_args=True)
+@Asukacmd(command='frules', pass_args=True)
 def get_frules(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     args = context.args
@@ -1274,7 +1274,7 @@ def get_frules(update, context):
 
 
 @typing_action
-@Akenocmd(command='fbroadcast', pass_args=True)
+@Asukacmd(command='fbroadcast', pass_args=True)
 def fed_broadcast(update, context):
     msg = update.effective_message  # type: Optional[Message]
     user = update.effective_user  # type: Optional[User]
@@ -1334,7 +1334,7 @@ def fed_broadcast(update, context):
 
 
 @send_action(ChatAction.UPLOAD_DOCUMENT)
-@Akenocmd(command='fbanlist', pass_args=True, pass_chat_data=True)
+@Asukacmd(command='fbanlist', pass_args=True, pass_chat_data=True)
 def fed_ban_list(update, context):  # sourcery no-metrics
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -1514,7 +1514,7 @@ def fed_ban_list(update, context):  # sourcery no-metrics
 
 
 @typing_action
-@Akenocmd(command='fednotif', pass_args=True)
+@Asukacmd(command='fednotif', pass_args=True)
 def fed_notif(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -1550,7 +1550,7 @@ def fed_notif(update, context):
 
 
 @typing_action
-@Akenocmd(command='fedchats', pass_args=True)
+@Asukacmd(command='fedchats', pass_args=True)
 def fed_chats(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -1615,7 +1615,7 @@ def fed_chats(update, context):
 
 
 @typing_action
-@Akenocmd(command='importfbans', pass_args=True, pass_chat_data=True)
+@Asukacmd(command='importfbans', pass_args=True, pass_chat_data=True)
 def fed_import_bans(update, context):  # sourcery no-metrics
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -1837,7 +1837,7 @@ def fed_import_bans(update, context):  # sourcery no-metrics
         send_message(update.effective_message, text)
 
 
-@Akenocallback(pattern=r"rmfed_")
+@Asukacallback(pattern=r"rmfed_")
 def del_fed_button(update, context):
     query = update.callback_query
     fed_id = query.data.split("_")[1]
@@ -1859,7 +1859,7 @@ def del_fed_button(update, context):
 
 
 @typing_action
-@Akenocmd(command='fbanstat', pass_args=True)
+@Asukacmd(command='fbanstat', pass_args=True)
 def fed_stat_user(update, context):  # sourcery no-metrics
     user = update.effective_user  # type: Optional[User]
     msg = update.effective_message  # type: Optional[Message]
@@ -1968,7 +1968,7 @@ def fed_stat_user(update, context):  # sourcery no-metrics
 
 
 @typing_action
-@Akenocmd(command='setfedlog', pass_args=True)
+@Asukacmd(command='setfedlog', pass_args=True)
 def set_fed_log(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -2010,7 +2010,7 @@ def set_fed_log(update, context):
 
 
 @typing_action
-@Akenocmd(command='unsetfedlog', pass_args=True)
+@Asukacmd(command='unsetfedlog', pass_args=True)
 def unset_fed_log(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -2053,7 +2053,7 @@ def unset_fed_log(update, context):
 
 
 @typing_action
-@Akenocmd('subfed', pass_args=True)
+@Asukacmd('subfed', pass_args=True)
 def subs_feds(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -2120,7 +2120,7 @@ def subs_feds(update, context):
 
 
 @typing_action
-@Akenocmd(command='unsubfed', pass_args=True)
+@Asukacmd(command='unsubfed', pass_args=True)
 def unsubs_feds(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -2187,7 +2187,7 @@ def unsubs_feds(update, context):
 
 
 @typing_action
-@Akenocmd(command='fedsubs', pass_args=True)
+@Asukacmd(command='fedsubs', pass_args=True)
 def get_myfedsubs(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -2236,7 +2236,7 @@ def get_myfedsubs(update, context):
 
 
 @typing_action
-@Akenocmd(command='myfeds', pass_args=True)
+@Asukacmd(command='myfeds', pass_args=True)
 def get_myfeds_list(update, context):
     chat = update.effective_chat  # type: Optional[Chat]
     user = update.effective_user  # type: Optional[User]
@@ -2352,7 +2352,7 @@ def get_chat(chat_id, chat_data):
 
 __mod_name__ = "Federations"
 
-from Akenobot.modules.language import gs
+from AsukaRobot.modules.language import gs
 
 def fed_owner_help(update: Update, context: CallbackContext):
     update.effective_message.reply_text(
@@ -2376,7 +2376,7 @@ def fed_user_help(update: Update, context: CallbackContext):
     )
 
 
-@Akenocallback(pattern=r"fed_help_")
+@Asukacallback(pattern=r"fed_help_")
 def fed_help(update: Update, context: CallbackContext):
     query = update.callback_query
     bot = context.bot
