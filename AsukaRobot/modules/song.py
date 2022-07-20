@@ -4,9 +4,9 @@ import aiohttp
 import youtube_dl
 
 from pyrogram import filters
-from AsukaRobot import pbot
+from Akenobot import pbot
 from youtube_search import YoutubeSearch
-from AsukaRobot.utils.errors import capture_err
+from Akenobot.utils.errors import capture_err
 
 
 def time_to_seconds(time):
