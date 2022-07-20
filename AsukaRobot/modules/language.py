@@ -4,10 +4,10 @@ from collections.abc import Iterable
 from telegram.ext import CommandHandler, CallbackQueryHandler
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 
-from AsukaRobot import dispatcher
-import AsukaRobot.modules.sql.language_sql as sql
-from AsukaRobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from AsukaRobot.langs import get_string, get_languages, get_language
+from Akenobot import dispatcher
+import Akenobot.modules.sql.language_sql as sql
+from Akenobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from Akenobot.langs import get_string, get_languages, get_language
 
 
 
