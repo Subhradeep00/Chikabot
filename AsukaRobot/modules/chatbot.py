@@ -3,7 +3,7 @@ import re
 import os
 import html
 import requests
-import AsukaRobot.modules.sql.chatbot_sql as sql
+import Akenobot.modules.sql.chatbot_sql as sql
 
 from time import sleep
 from telegram import ParseMode
@@ -15,10 +15,10 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
-from AsukaRobot.modules.helper_funcs.filters import CustomFilters
-from AsukaRobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from AsukaRobot import dispatcher, updater, SUPPORT_CHAT
-from AsukaRobot.modules.log_channel import gloggable
+from Akenobot.modules.helper_funcs.filters import CustomFilters
+from Akenobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from Akenobot import dispatcher, updater, SUPPORT_CHAT
+from Akenobot.modules.log_channel import gloggable
 
 @run_async
 @user_admin_no_reply
@@ -126,7 +126,7 @@ def chatbot(update: Update, context: CallbackContext):
 
 def list_all_chats(update: Update, context: CallbackContext):
     chats = sql.get_all_kuki_chats()
-    text = "<b>Asuka Enabled Chats</b>\n"
+    text = "<b>Akeno Enabled Chats</b>\n"
     for chat in chats:
         try:
             x = context.bot.get_chat(int(*chat))
