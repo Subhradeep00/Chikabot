@@ -24,7 +24,7 @@ from telegram.ext import (
     Filters,
 )
 
-from AkenoRobot.modules.helper_funcs.decorators import Akenocmd, Asukamsg, Akenocallback
+from Akenobot.modules.helper_funcs.decorators import Akenocmd, Akenomsg, Akenocallback
 
 from ..modules.helper_funcs.anonymous import user_admin, AdminPerms
 
@@ -509,7 +509,7 @@ def __chat_settings__(chat_id, user_id):
     notes = sql.get_all_chat_notes(chat_id)
     return f"There are `{len(notes)}` notes in this chat."
 
-from AsukaRobot.modules.language import gs
+from Akenobot.modules.language import gs
 
 def get_help(chat):
     return gs(chat, "notes_help")
