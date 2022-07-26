@@ -24,9 +24,7 @@ from Akenobot.modules.disable import DisableAbleCommandHandler
 
 sites_list = {
     "Telegram": "https://api.telegram.org",
-    "Anime": "https://animixplay.to",
-    "MAL": "https://myanimelist.net",
-    "Wallpaper": "https//wallpapercave.com"
+    "Anime": "https://animixplay.to"
 }
 
 PING_IMG = "https://te.legra.ph/file/ce84881970d9514a62fd4.jpg"
