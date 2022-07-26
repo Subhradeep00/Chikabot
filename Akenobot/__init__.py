@@ -85,7 +85,7 @@ if ENV:
     API_HASH = os.environ.get('API_HASH', None)
     DB_URI = os.environ.get('DATABASE_URL')
     connect_db = psycopg2.connect(DB_URL,sslmode="required")
-    DB_URL = DB_URL.replace(
+    DB_URI = DB_URI.replace(
         "postgres://", "postgresql://", 1
         ) # rest of connection code using the connection string `uri`
     DONATION_LINK = os.environ.get('DONATION_LINK')
