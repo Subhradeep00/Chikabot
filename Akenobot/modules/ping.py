@@ -117,7 +117,7 @@ async def stats_callbacc(_, CallbackQuery):
 
 @run_async
 def pingall(update: Update, context: CallbackContext):
-    to_ping = ["Kaizoku", "Kayo", "Telegram", "Jikan"]
+    to_ping = ["Telegram", "Anime", "MAL", "Wallpaper"]
     pinged_list = ping_func(to_ping)
     pinged_list.insert(2, '')
     uptime = get_readable_time((time.time() - StartTime))
