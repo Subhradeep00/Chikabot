@@ -23,9 +23,9 @@ from pyrogram import filters
 from Akenobot.modules.disable import DisableAbleCommandHandler
 
 sites_list = {
-    "Telegram": "https://api.telegram.org"
-    "Anime": "https://animixplay.to"
-    "MAL": "https://myanimelist.net"
+    "Telegram": "https://api.telegram.org",
+    "Anime": "https://animixplay.to",
+    "MAL": "https://myanimelist.net",
     "Wallpaper": "https//wallpapercave.com"
 }
 
