@@ -7,7 +7,7 @@ from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
 from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
 
 from Akenobot import DEV_USERS, DRAGONS, dispatcher
-from Akenobot.modules.helper_funcs.decorators import Asukacallback
+from Akenobot.modules.helper_funcs.decorators import Akenocallback
 
 
 class AdminPerms(Enum):
