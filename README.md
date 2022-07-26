@@ -8,13 +8,13 @@
     <a href="https://python.org">
         <img src="http://forthebadge.com/images/badges/made-with-python.svg" alt="made-with-python">
     </a>
-<a href="https://GitHub.com/RimuruDemonlord">
+<a href="https://GitHub.com/Subhradeep00">
         <img src="http://ForTheBadge.com/images/badges/built-with-love.svg" alt="built-with-love">
     </a>
 <img src="https://img.shields.io/badge/python-3.10.1-green?style=for-the-badge&logo=appveyor" alt="Python Version">
 <img src="https://img.shields.io/badge/Telethon-1.24.0-yellow?style=for-the-badge&logo=appveyor" alt="Telethon Version">
 <img src="https://img.shields.io/badge/Pyrogram-1.4.1-red?style=for-the-badge&logo=appveyor" alt="Pyrogram Version">
-<a href="https://github.com/RimuruDemonlord/AsukaRobot"> <img src="https://img.shields.io/github/repo-size/RimuruDemonlord/AsukaRobot?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>
+<a href="https://github.com/Subhradeep00/Chikabot"> <img src="https://img.shields.io/github/repo-size/Subhradeep00/Chikabot?color=red&logo=github&logoColor=green&style=for-the-badge" /></a>
 
 ##  ╒═══「 Status 」
 
@@ -31,8 +31,8 @@
 
 ### ╒═══「 Creator Info/Credits 」
 
-+  [Xelcius](https://github.com/RimuruDemonlord) : OWNER | DEV
-+  [Hodaka](https://github.com/H0daka) : BASE
++  [Akatsuki](https://github.com/Subhradeep00) : OWNER | DEV
++  [Xelcius](https://github.com/RimuruDemonlord) : BASE
 
 ╘══「 Any other authorship/credits can be seen through the commits. 」
 
