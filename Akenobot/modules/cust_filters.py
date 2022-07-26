@@ -29,7 +29,7 @@ from Akenobot.modules.helper_funcs.string_handling import (
     markdown_to_html,
     split_quotes,
 )
-from AsukaRobot.modules.sql import cust_filters_sql as sql
+from Akenobot.modules.sql import cust_filters_sql as sql
 
 HANDLER_GROUP = 10
 
