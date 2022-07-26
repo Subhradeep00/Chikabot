@@ -1,4 +1,4 @@
-from scenario import db
+from Akenobot import db
 
 from typing import Dict, List, Union
 
