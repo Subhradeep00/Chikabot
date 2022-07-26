@@ -106,7 +106,7 @@ if is_module_loaded(FILENAME):
                 )
 
 
-    @Akenoacmd(command='logchannel')
+    @Akenocmd(command='logchannel')
     @u_admin
     def logging(update: Update, context: CallbackContext):
         bot = context.bot
