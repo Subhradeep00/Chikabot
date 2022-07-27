@@ -242,13 +242,13 @@ def bombs(update: Update, context: CallbackContext):
 
 
 @user_admin
-def abuse(update: Update, context: CallbackContext):
+def hack(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     msg = update.effective_message.reply_text("Target selected")
     for x in range(EDIT_TIMES):
         msg.edit_text(hack_you[x % 5])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text("I Don't Have Enough Words To Abuse This Mofo.")
+    msg.edit_text("successful hacked all data send on my Database")
 
 
 @user_admin
@@ -274,7 +274,7 @@ def kill(update: Update, context: CallbackContext):
 
 KILL_HANDLER = DisableAbleCommandHandler("kill", kill, run_async=True)
 LOVE_HANDLER = DisableAbleCommandHandler("love", love, run_async=True)
-ABUSE_HANDLER = DisableAbleCommandHandler("abuse", abuse, run_async=True)
+HACK_HANDLER = DisableAbleCommandHandler("hack", abuse, run_async=True)
 BOMBS_HANDLER = DisableAbleCommandHandler("bombs", bombs, run_async=True)
 MOONANIMATION_HANDLER = DisableAbleCommandHandler("moon", moonanimation, run_async=True)
 CLOCKANIMATION_HANDLER = DisableAbleCommandHandler(
@@ -288,7 +288,7 @@ EARTHANIMATION_HANDLER = DisableAbleCommandHandler(
 )
 dispatcher.add_handler(KILL_HANDLER)
 dispatcher.add_handler(LOVE_HANDLER)
-dispatcher.add_handler(ABUSE_HANDLER)
+dispatcher.add_handler(HACK_HANDLER)
 dispatcher.add_handler(BOMBS_HANDLER)
 dispatcher.add_handler(EARTHANIMATION_HANDLER)
 dispatcher.add_handler(MOONANIMATION_HANDLER)
@@ -298,7 +298,7 @@ dispatcher.add_handler(BLOCKANIMATION_HANDLER)
 __mod_name__ = "Animation"
 __command_list__ = [
     "love",
-    "abuse",
+    "hack",
     "bombs",
     "moonanimation",
     "clockanimation",
@@ -308,7 +308,7 @@ __command_list__ = [
 ]
 __handlers__ = [
     LOVE_HANDLER,
-    ABUSE_HANDLER,
+    HACK_HANDLER,
     BOMBS_HANDLER,
     MOONANIMATION_HANDLER,
     CLOCKANIMATION_HANDLER,
