@@ -274,7 +274,7 @@ def kill(update: Update, context: CallbackContext):
 
 KILL_HANDLER = DisableAbleCommandHandler("kill", kill, run_async=True)
 LOVE_HANDLER = DisableAbleCommandHandler("love", love, run_async=True)
-HACK_HANDLER = DisableAbleCommandHandler("hack", abuse, run_async=True)
+HACK_HANDLER = DisableAbleCommandHandler("hack", hack, run_async=True)
 BOMBS_HANDLER = DisableAbleCommandHandler("bombs", bombs, run_async=True)
 MOONANIMATION_HANDLER = DisableAbleCommandHandler("moon", moonanimation, run_async=True)
 CLOCKANIMATION_HANDLER = DisableAbleCommandHandler(
