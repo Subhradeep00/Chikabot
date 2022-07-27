@@ -13,6 +13,8 @@ from telethon.sessions import StringSession
 from telethon import TelegramClient
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
+import pymongo
+
 
 StartTime = time.time()
 
@@ -274,3 +276,8 @@ except BaseException:
 finally:
 
    REDIS.ping()
+
+MONGO_URL = MONGO_DB_URI
+
+mongo_client = MongoClient(MONGO_URL)
+db = mongo_client.wbb
