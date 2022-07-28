@@ -117,7 +117,7 @@ def chatbot(update: Update, context: CallbackContext):
             return
         anon = message.text
         bot.send_chat_action(chat_id, action="typing")
-        url = f"https://kukiapi.xyz/api/apikey=1945926337-KUKIGG0NwD6cL6/𝓐𝓴𝓮𝓷𝓸/Akatsuki/message={anon}" 
+        url = f"https://kukiapi.xyz/api/apikey=1904931180-KUKIaY2IWo6Fy0/𝓐𝓴𝓮𝓷𝓸/αℓeи/message={anon}" 
         request = requests.get(url) 
         results = json.loads(request.text) 
         result = f"{results['reply']}"
