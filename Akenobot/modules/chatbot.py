@@ -40,7 +40,7 @@ def kukirm(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Asuka Chat Bot Disabled by {}.".format(mention_html(user.id, user.first_name)),
+                "Akeno Chat Bot Disabled by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
@@ -66,7 +66,7 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Asuka Chat Bot Enabled By {}.".format(mention_html(user.id, user.first_name)),
+                "Akeno Chat Bot Enabled By {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
@@ -117,7 +117,7 @@ def chatbot(update: Update, context: CallbackContext):
             return
         anon = message.text
         bot.send_chat_action(chat_id, action="typing")
-        url = f"https://kukiapi.xyz/api/apikey=1904931180-KUKIaY2IWo6Fy0/𝓐𝓴𝓮𝓷𝓸/αℓeи/message={anon}" 
+        url = f"https://kukiapi.xyz/api/apikey=5546958418-KUKIHp3UjW6qp5/𝓐𝓴𝓮𝓷𝓸/Invincible/message={anon}" 
         request = requests.get(url) 
         results = json.loads(request.text) 
         result = f"{results['reply']}"
