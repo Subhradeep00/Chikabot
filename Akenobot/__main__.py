@@ -60,35 +60,36 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 PM_START_TEXT = """
-*Hey Darling {},*
+*【Hey Darling {}】*
+¤~~~~~~~~~~~~~~~~~~~~~~~~~~
 *Myself 𝓐𝓴𝓮𝓷𝓸 𝓗𝓲𝓶𝓮𝓳𝓲𝓶𝓪, Rias Gremory's Queen As Well As A Powerful Group Management Bot.*
-
+「━━━━━━━━━━━━
 ☆ *Rank* ~ 𝕼𝖚𝖊𝖊𝖓
 ☆ *Uptime* ~ {}
 ☆ *Python Version* ~ {}
+━━━━━━━━━━━━━━━━━━」
+*Hit The The /Help Button To Get List Of My Commands*
+~~~~~~~~~~~~~~~~~~~~~~~~~~¤
 
-*Hit The The Help Button To Get List Of My Commands.××*
-
-*• @Akeno00bot Powered By* [𝔸𝕜𝕒𝕥𝕤𝕦𝕜𝕚](https://t.me/Subhradeep00)
 """
 
 buttons = [
     [
                         InlineKeyboardButton(
-                             text="➕️ Add Akeno To Your Chat ➕️",
+                             text="!『➕️ ᴀᴅᴅ ᴀᴋᴇɴᴏ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ ➕️』¡",
                              url="https://t.me/Akeno00bot?startgroup=true"),
                     ],
                    [
                        InlineKeyboardButton(
-                             text="Anime Flix",
+                             text="~『ᴏғғ ᴛᴏᴘɪᴄ』~",
                              url="https://t.me/Its_Anime_Flix_India"),
                        InlineKeyboardButton(
-                             text="About Akeno",
-                             callback_data="asuka_"),
+                             text="~『ᴀʙᴏᴜᴛ ᴀᴋᴇɴᴏ』~",
+                             callback_data="akeno_"),
                    ],
                   [
                         InlineKeyboardButton(
-                             text="Help & Cmds ❔",
+                             text="~『ʜᴇʟᴘ』~",
                              callback_data="help_back"),
                     ],
     ]
@@ -99,14 +100,6 @@ ABOUT1 = """
 
 ABOUT2 = """
 *‣ Akeno Support Chats*\nJoin My Support Group/Channel For Reporting Problems And Updates On @AkenoSupport00.
-"""
-
-REPO_TXT = """
-*‣ Owner:*
-• [𝔸𝕜𝕒𝕥𝕤𝕦𝕜𝕚](t.me/Subhradeep00)
-\n*‣ Note:*
-• If You Want This Bot's Repo You Can Get It From The Button Below.
-• Report Any Kind Of Bugs At [Support](t.me/AkenoSupport00)
 """
 
 ABOUT3 = """Hello [{}], My name is *𝓐𝓴𝓮𝓷𝓸 𝓗𝓲𝓶𝓮𝓳𝓲𝓶𝓪*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
@@ -132,17 +125,6 @@ Main commands available :
 For all command use / or !
 """
 
-ACRUISE = """
-💫 𝐏𝐥𝐞𝐚𝐬𝐞 𝐉𝐨𝐢𝐧 Anime_Flix_India !!!
-
-• 𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐀𝐥𝐥 𝐋𝐚𝐭𝐞𝐬𝐭 𝐀𝐧𝐢𝐦𝐞𝐬.
-• 𝐇𝐢𝐠𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲 𝐀𝐧𝐢𝐦𝐞, 𝐋𝐨𝐰 𝐒𝐢𝐳𝐞.
-• 𝐅𝐚𝐬𝐭𝐞𝐬𝐭 𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐎𝐟 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐀𝐧𝐢𝐦𝐞𝐬
-• 24/7 𝐀𝐧𝐢𝐦𝐞 𝐑𝐞𝐪𝐮𝐞𝐬𝐭𝐬 𝐀𝐜𝐜𝐞𝐩𝐭𝐞𝐝.
-
-✨ 𝐖𝐞 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐘𝐨𝐮𝐫 𝐒𝐮𝐩𝐩𝐨𝐫𝐭 & 𝐘𝐨𝐮 𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐀𝐧𝐢𝐦𝐞𝐬.🤍✨
-"""
-
 Asuka_IMG = (
       "https://te.legra.ph/file/ce84881970d9514a62fd4.jpg",
 )
@@ -153,11 +135,11 @@ Asuka_N_IMG = (
       "https://te.legra.ph/file/4ea17f15d61bd7df808be.jpg"
 )
 
-Asuka_PIC = "https://te.legra.ph/file/5e16d1ce34d58bca8bdde.jpg"
+Asuka_PIC = "https://telegra.ph/file/46129338065a114ffe609.jpg"
 
 Asuka_VID = "https://te.legra.ph/file/26b895dc8cce38d00523c.mp4"
 
-PM_PHOTO = "https://te.legra.ph/file/5e16d1ce34d58bca8bdde.jpg"
+PM_PHOTO = "https://telegra.ph/file/46129338065a114ffe609.jpg"
 
 Asuka_DISPACHER_PIC = "https://te.legra.ph/file/d7a508059169d55277532.jpg"
 
@@ -294,23 +276,6 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
             )
-            update.effective_message.reply_photo(
-                     photo="https://te.legra.ph/file/5706b89906ba48b272ee1.jpg",
-                     caption=ACRUISE,
-                     parse_mode=ParseMode.HTML,
-                     reply_markup=InlineKeyboardMarkup(
-                [
-                  [
-                       InlineKeyboardButton(
-                             text="Join",
-                             url="t.me/Anime_Flix_India"),
-                       InlineKeyboardButton(
-                             text="Index",
-                             url="t.me/Anime_Flix_India")
-                     ]
-                ]
-            ),
-        )
 
     else:
         first = update.effective_user.full_name
@@ -482,7 +447,7 @@ def repo_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/Subhradeep00/Akenobot"),
+                    InlineKeyboardButton(text="Source Code", url="https://telegra.ph/file/10aad116bb3589f8f4817.jpg"),
                     InlineKeyboardButton(text="Akatsuki", url="t.me/Subhradeep00"),
                  ],
                  [
@@ -515,7 +480,7 @@ def akeno_callback_data(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="Support", callback_data="about_back"),
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/Subhradeep00/Akenobot"),
+                    InlineKeyboardButton(text="Source Code", url="https://telegra.ph/file/10aad116bb3589f8f4817.jpg"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="akeno_back")
