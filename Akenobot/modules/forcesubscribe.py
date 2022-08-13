@@ -14,7 +14,7 @@ from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboard
 
 from Akenobot import BOT_ID, BOT_USERNAME, BOT_NAME
 
-# from scenario import OWNER_ID as SUDO_USERS
+ #from Akenobot import OWNER_ID as SUDO_USERS
 from Akenobot import pgram
 from Akenobot.modules.sql import forceSubscribe_sql as sql
 
@@ -138,7 +138,7 @@ def _check_member(client, message):
             return
 
 
-@pgram.on_message(filters.command(["forcesubscribe", "forcesub", f"forcesub@{BOT_USERNAME}", f"forcesubscribe@{BOT_USERNAME}"]) & ~filters.private)
+@pgram.on_message(filters.command(["fsub", f"fsub@{BOT_USERNAME}"]) & ~filters.private)
 def config(client, message):
     user = client.get_chat_member(message.chat.id, message.from_user.id)
     if user.status == "creator":
@@ -205,11 +205,10 @@ __help__ = f"""
 Note: Only creator of the group can setup me and i will not allow force subscribe again if not done so.
  
 *Commmands*:
-   ➢ `/forcesubscribe`*:* To get the current settings.
-   ➢ `/forcesubscribe <no/off/disable>`*:* To turn of ForceSubscribe.
-   ➢ `/forcesubscribe <channel username>`*:* To turn on and setup the channel.
-   ➢ `/forcesubscribe clear`*:* To unmute all members who muted by me.
-Note: /forcesub is an alias of /forcesubscribe
+   ➢ `/fsub`*:* To get the current settings.
+   ➢ `/fsub <no/off/disable>`*:* To turn of ForceSubscribe.
+   ➢ `/fsub <channel username>`*:* To turn on and setup the channel.
+   ➢ `/fsub clear`*:* To unmute all members who muted by me.
  
 """
 __mod_name__ = "F-Sub"
