@@ -211,4 +211,4 @@ Note: Only creator of the group can setup me and i will not allow force subscrib
    ➢ `/fsub clear`*:* To unmute all members who muted by me.
  
 """
-__mod_name__ = "F-Sub"
+__mod_name__ = "ғ-sᴜʙ"
