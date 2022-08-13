@@ -12,11 +12,11 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from scenario import BOT_ID, BOT_USERNAME, BOT_NAME
+from Akenobot import BOT_ID, BOT_USERNAME, BOT_NAME
 
 # from scenario import OWNER_ID as SUDO_USERS
-from scenario import pgram
-from scenario.modules.sql import forceSubscribe_sql as sql
+from Akenobot import pgram
+from Akenobot.modules.sql import forceSubscribe_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 
