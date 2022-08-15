@@ -51,18 +51,12 @@ async def hmm(yes):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    Akeno = f"➛ 「 ʜᴇʏ [{yes.sender.first_name}](tg://user?id={yes.sender.id}), I'm 𝒜𝓀ℯ𝓃ℴ 」\n"
-    
-    Akeno += f"➛ 「 ᴜᴘᴛɪᴍᴇ 」 ~ `{uptime}`\n"
-    
-    Akeno += f"➛ 「 ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ 」 ~ `{version.__version__}`\n"
-    
-    Akeno += f"➛ 「 ᴘᴛʙ ᴠᴇʀsɪᴏɴ 」 ~ `{telegram.__version__}`\n"
-    
-    Akeno += f"➛ 「 ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ 」 ~ `{pyro}`\n"
-    
-    Akeno += f"➛ 「 ᴍʏ ᴍᴀsᴛᴇʀ 」 ~ [ᴀᴋᴀᴛsᴜᴋɪ](tg://user?id={OWNER_ID})\n\n"
-    
+    Akeno = f"➛ 「 ʜᴇʏ [{yes.sender.first_name}](tg://user?id={yes.sender.id}), I'm 𝒜𝓀ℯ𝓃ℴ 」\n"   
+    Akeno += f"➛ 「 ᴜᴘᴛɪᴍᴇ 」 ~ `{uptime}`\n"    
+    Akeno += f"➛ 「 ᴛᴇʟᴇᴛʜᴏɴ 」 ~ `{version.__version__}`\n"    
+    Akeno += f"➛ 「 ᴘᴛʙ ᴠᴇʀsɪᴏɴ 」 ~ `{telegram.__version__}`\n"    
+    Akeno += f"➛ 「 ᴘʏʀᴏɢʀᴀᴍ 」 ~ `{pyro}`\n"    
+    Akeno += f"➛ 「 ᴍʏ ᴍᴀsᴛᴇʀ 」 ~ [ᴀᴋᴀᴛsᴜᴋɪ](tg://user?id={OWNER_ID})\n\n"    
     Akeno += f"ᴛʜᴀɴᴋs ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {yes.chat.title}"
     BUTTON = [[Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/AkenoSupport00"), Button.url("ᴜᴘᴅᴀᴛᴇs", "https://t.me/AkenoSupport0")]]
     on = await borg.send_file(yes.chat_id, file="https://te.legra.ph/file/ce84881970d9514a62fd4.jpg",caption=Akeno, buttons=BUTTON)
@@ -71,4 +65,4 @@ async def hmm(yes):
 async def repo(yes):
     Akeno = f"**Hey [{event.sender.first_name}](tg://user?id={event.sender.id}), Click The Button Below To Get My Repo**\n\n"
     BUTTON = [[Button.url("GitHub", "https://github.com/Subhradeep00/Akenobot"), Button.url("Developer", "https://t.me/Subhradeep00")]]
-    await borg.send_file(event.chat_id, file="https://te.legra.ph/file/ce84881970d9514a62fd4.jpg", caption=Akeno, buttons=BUTTON)
+    await borg.send_file(event.chat_id, file="https://telegra.ph/file/333f0bb89a2792553bd9a.jpg", caption=Akeno, buttons=BUTTON)
