@@ -51,13 +51,13 @@ async def hmm(yes):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    Akeno = f"• **Hey [{yes.sender.first_name}](tg://user?id={yes.sender.id}), I'm 𝒜𝓀ℯ𝓃ℴ**\n"
-    Akeno += f"• **My Uptime** - `{uptime}`\n"
-    Akeno += f"• **Telethon Version** - `{version.__version__}`\n"
-    Akeno += f"• **PTB Version** - `{telegram.__version__}`\n"
-    Akeno += f"• **Pyrogram Version** - `{pyro}`\n"
-    Akeno += f"• **My Master** - [𝔸𝕜𝕒𝕥𝕤𝕦𝕜𝕚](tg://user?id={OWNER_ID})\n\n"
-    Akeno += f"Thanks For Adding Me In {yes.chat.title}"
+    Akeno = f"➛ 「ʜᴇʏ [{yes.sender.first_name}](tg://user?id={yes.sender.id}), I'm 𝒜𝓀ℯ𝓃ℴ」\n"
+    Akeno += f"➛ 「ᴜᴘᴛɪᴍᴇ」 - `{uptime}`\n"
+    Akeno += f"➛ 「ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ」 - `{version.__version__}`\n"
+    Akeno += f"➛ 「ᴘᴛʙ ᴠᴇʀsɪᴏɴ」 - `{telegram.__version__}`\n"
+    Akeno += f"➛ 「ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ」 - `{pyro}`\n"
+    Akeno += f"➛ 「ᴍʏ ᴍᴀsᴛᴇʀ」 - [ᴀᴋᴀᴛsᴜᴋɪ](tg://user?id={OWNER_ID})\n\n"
+    Akeno += f"ᴛʜᴀɴᴋs ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {yes.chat.title}"
     BUTTON = [[Button.url("Support Chat", "https://t.me/AkenoSupport00"), Button.url("Updates", "https://t.me/AkenoSupport0")]]
     on = await borg.send_file(yes.chat_id, file="https://te.legra.ph/file/ce84881970d9514a62fd4.jpg",caption=Akeno, buttons=BUTTON)
 
