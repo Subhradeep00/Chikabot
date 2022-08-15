@@ -126,7 +126,7 @@ For all command use / or !
 """
 
 Asuka_IMG = (
-      "https://te.legra.ph/file/ce84881970d9514a62fd4.jpg",
+      "https://telegra.ph/file/31cf0198f8a38c1ad27dd.jpg",
 )
 
 TEXXT = "Yes Darling, I Am Alive And Working Fine.\nCheck Out The Buttons Mentioned Below.",
@@ -135,7 +135,7 @@ Asuka_N_IMG = (
       "https://te.legra.ph/file/4ea17f15d61bd7df808be.jpg"
 )
 
-Asuka_PIC = "https://telegra.ph/file/46129338065a114ffe609.jpg"
+Asuka_PIC = "https://telegra.ph/file/ece52b517b9fef3b4d3ae.jpg"
 
 Asuka_VID = "https://te.legra.ph/file/26b895dc8cce38d00523c.mp4"
 
