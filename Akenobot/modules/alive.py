@@ -18,10 +18,10 @@ from pyrogram import __version__ as pyro
 
 edit_time = 5
 """ =======================CONSTANTS====================== """
-file1 = "https://te.legra.ph/file/ce84881970d9514a62fd4.jpg"
-file2 = "https://te.legra.ph/file/5e16d1ce34d58bca8bdde.jpg"
-file3 = "https://te.legra.ph/file/4ea17f15d61bd7df808be.jpg"
-file4 = "https://te.legra.ph/file/ce057de710c7a05ae14c4.jpg"
+file1 = "https://telegra.ph/file/333f0bb89a2792553bd9a.jpg"
+file2 = "https://telegra.ph/file/333f0bb89a2792553bd9a.jpg"
+file3 = "https://telegra.ph/file/333f0bb89a2792553bd9a.jpg"
+file4 = "https://telegra.ph/file/333f0bb89a2792553bd9a.jpg"
 """ =======================CONSTANTS====================== """
 
 START_TIME = datetime.utcnow()
@@ -51,14 +51,20 @@ async def hmm(yes):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
-    Akeno = f"➛ 「ʜᴇʏ [{yes.sender.first_name}](tg://user?id={yes.sender.id}), I'm 𝒜𝓀ℯ𝓃ℴ」\n"
-    Akeno += f"➛ 「ᴜᴘᴛɪᴍᴇ」 - `{uptime}`\n"
-    Akeno += f"➛ 「ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ」 - `{version.__version__}`\n"
-    Akeno += f"➛ 「ᴘᴛʙ ᴠᴇʀsɪᴏɴ」 - `{telegram.__version__}`\n"
-    Akeno += f"➛ 「ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ」 - `{pyro}`\n"
-    Akeno += f"➛ 「ᴍʏ ᴍᴀsᴛᴇʀ」 - [ᴀᴋᴀᴛsᴜᴋɪ](tg://user?id={OWNER_ID})\n\n"
+    Akeno = f"➛ 「 ʜᴇʏ [{yes.sender.first_name}](tg://user?id={yes.sender.id}), I'm 𝒜𝓀ℯ𝓃ℴ 」\n"
+    
+    Akeno += f"➛ 「 ᴜᴘᴛɪᴍᴇ 」 ~ `{uptime}`\n"
+    
+    Akeno += f"➛ 「 ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ 」 ~ `{version.__version__}`\n"
+    
+    Akeno += f"➛ 「 ᴘᴛʙ ᴠᴇʀsɪᴏɴ 」 ~ `{telegram.__version__}`\n"
+    
+    Akeno += f"➛ 「 ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ 」 ~ `{pyro}`\n"
+    
+    Akeno += f"➛ 「 ᴍʏ ᴍᴀsᴛᴇʀ 」 ~ [ᴀᴋᴀᴛsᴜᴋɪ](tg://user?id={OWNER_ID})\n\n"
+    
     Akeno += f"ᴛʜᴀɴᴋs ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {yes.chat.title}"
-    BUTTON = [[Button.url("Support Chat", "https://t.me/AkenoSupport00"), Button.url("Updates", "https://t.me/AkenoSupport0")]]
+    BUTTON = [[Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/AkenoSupport00"), Button.url("ᴜᴘᴅᴀᴛᴇs", "https://t.me/AkenoSupport0")]]
     on = await borg.send_file(yes.chat_id, file="https://te.legra.ph/file/ce84881970d9514a62fd4.jpg",caption=Akeno, buttons=BUTTON)
 
 @register(pattern=("/repo"))
