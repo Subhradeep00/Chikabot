@@ -90,7 +90,7 @@ def ping(update: Update, context: CallbackContext):
     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
     uptime = get_readable_time((time.time() - StartTime))
     text = f""" 
-           <b>🏓PONG!!</b>\n<b>Time Taken:</b> <code>{telegram_ping}</code>\n<b>Service uptime:</b> <code>{uptime}</code>
+           <b>🏓PONG!!</b>\n<b>↬ ᴛɪᴍᴇ ᴛᴀᴋᴇɴ:</b> <code>{telegram_ping}</code>\n<b>↬ ᴜᴘᴛɪᴍᴇ:</b> <code>{uptime}</code>
            """
 
 
@@ -115,7 +115,7 @@ async def stats_callbacc(_, CallbackQuery):
 
 @run_async
 def pingall(update: Update, context: CallbackContext):
-    to_ping = ["Telegram", "Anime", "MAL", "Wallpaper"]
+    to_ping = ["Telegram", "Anime"]
     pinged_list = ping_func(to_ping)
     pinged_list.insert(2, '')
     uptime = get_readable_time((time.time() - StartTime))
