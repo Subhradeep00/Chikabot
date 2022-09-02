@@ -91,3 +91,4 @@ python-rapidjson==1.5
 pytimeparse
 AnilistPython
 PyGithub
+request
