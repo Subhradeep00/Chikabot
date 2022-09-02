@@ -23,17 +23,7 @@ BLUE_TEXT_CLEAN_GROUP = 13
 CommandHandlerList = (CommandHandler, CustomCommandHandler, DisableAbleCommandHandler)
 command_list = [
     "cleanblue",
-    "ignoreblue",
-    "unignoreblue",
     "listblue",
-    "ungignoreblue",
-    "gignoreblue" "start",
-    "help",
-    "settings",
-    "donate",
-    "stalk",
-    "aka",
-    "leaderboard",
 ]
 
 for handler_list in dispatcher.handlers:
