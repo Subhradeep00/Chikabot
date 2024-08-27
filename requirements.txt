@@ -25,7 +25,7 @@ telethon==1.30.0
 python-telegram-bot==20.6
 pyrogram==2.0.106
 spamwatch==0.3.0
-html_telegraph_poster==0.4.7
+html_telegraph_poster==0.5.0
 telegraph==2.1.0
 
 # MongoDB and Database
