@@ -63,7 +63,7 @@ zalgo-text==0.6
 # Image processing
 Pillow==10.0.0
 opencv-python-headless==4.8.1.78
-bing_image_downloader==1.1.5
+bing_image_downloader==1.1.2
 fontTools==4.42.1
 glitch_this==1.0.3
 
