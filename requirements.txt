@@ -23,7 +23,7 @@ wget==3.2
 # Telegram and Messaging APIs
 telethon==1.30.0
 python-telegram-bot==20.6
-pyrogram==2.0.141
+pyrogram==2.0.106
 spamwatch==1.1.0
 html_telegraph_poster==0.4.7
 telegraph==2.1.0
