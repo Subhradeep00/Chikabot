@@ -43,7 +43,7 @@ cachetools==5.3.1
 # Audio/Video processing
 ffmpeg-python==0.2.0
 pytube==15.0.0
-instantmusic==3.1.5
+instantmusic==2.2
 PyLyrics==1.1.0
 youtube-search-python==1.9.4
 youtube_search==2.1.2
