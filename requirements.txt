@@ -83,7 +83,7 @@ nekos.py==1.1.0
 tgcrypto==1.2.5
 pythonping==1.1.4
 tswift==0.7.0
-pytimeparse==1.1.10
+pytimeparse==1.1.8
 AnilistPython==1.3.5
 NumPy==1.25.2
 asyncio==3.4.3
