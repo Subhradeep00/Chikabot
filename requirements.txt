@@ -84,7 +84,7 @@ tgcrypto==1.2.5
 pythonping==1.1.4
 tswift==0.7.0
 pytimeparse==1.1.8
-AnilistPython==1.3.5
+AnilistPython==0.1.3
 NumPy==1.25.2
 asyncio==3.4.3
 pykeyboard==0.1.4
