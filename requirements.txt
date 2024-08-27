@@ -10,7 +10,7 @@ python-dotenv==1.0.0
 # Web scraping and parsing
 beautifulsoup4==4.12.2
 lxml==4.9.3
-html2text==2023.8.4
+html2text==2020.1.16
 parsel==1.8.1
 feedparser==6.0.10
 urllib3==2.0.6
