@@ -35,7 +35,7 @@ sqlalchemy==2.0.20
 psycopg2-binary==2.9.7
 
 # Redis and Caching
-redis==5.0.10
+redis==5.0.8
 aioredis==2.0.1
 hiredis==2.2.3
 cachetools==5.3.1
