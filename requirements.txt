@@ -9,7 +9,7 @@ wget==3.2
 secureme==0.0.4
 cowpy
 motor==2.5.1
-py-tgcalls==0.8.6
+py-tgcalls>=0.8.0,<0.9.0
 gpytranslate==1.3.0
 PyDictionary==2.0.1
 emoji
