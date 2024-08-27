@@ -81,7 +81,7 @@ pySmartDL==1.3.4
 pyrate-limiter==3.7.0
 nekos.py==1.1.0
 tgcrypto==1.2.5
-pythonping==1.1.6
+pythonping==1.1.4
 tswift==0.6.1
 pytimeparse==1.1.10
 AnilistPython==1.3.5
