@@ -9,7 +9,7 @@
          "manager",
          "Akeno"
       ],   
-   "repository": "https://github.com/Subhradeep00/Chikabot/tree/main",
+   "repository": "https://github.com/Subhradeep00/Chikabot",
    "stack": "heroku-22",
    "addons": [
       {
