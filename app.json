@@ -10,6 +10,7 @@
          "Akeno"
       ],   
    "repository": "https://github.com/Subhradeep00/Chikabot",
+   "stack": "heroku-22",
    "addons": [
       {
          "options": {
@@ -54,7 +55,7 @@
          "value": ""
       },
       "SUPPORT_CHAT": {
-         "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to Asuka support than consider you made an enemy.",
+         "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to Akeno support than consider you made an enemy.",
          "required": true,
          "value": ""
       },
